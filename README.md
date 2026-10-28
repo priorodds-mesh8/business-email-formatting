@@ -21,7 +21,7 @@ The skill handles requests, updates, meeting recaps, proposal follow-ups, and sh
 >
 > I can finish the estimate after I receive both. Data purchases are separate from the project fee.
 >
-> Thanks,  
+> Thanks,<br>
 > Sam
 
 This is a fictional example. The format makes the two inputs visible and keeps the fee exclusion.
