@@ -1,0 +1,5 @@
+interface:
+  display_name: "Business Email Formatting"
+  short_description: "Clear paragraphs, lists, and actions for business email"
+policy:
+  allow_implicit_invocation: true
