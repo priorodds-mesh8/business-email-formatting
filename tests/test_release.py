@@ -43,7 +43,7 @@ class ReleaseTests(unittest.TestCase):
         installed = project / ".claude/skills" / builder.NAME
         for name in builder.SKILL_FILES:
             self.assertEqual((installed / name).read_bytes(), (package / "skills" / builder.NAME / name).read_bytes())
-        self.assertIn(str(installed / "SKILL.md").replace("\\", "/"), (project / "CLAUDE.md").read_text())
+        self.assertIn((installed / "SKILL.md").resolve().as_posix(), (project / "CLAUDE.md").read_text())
 
     def test_build_does_not_replace_existing_archives(self):
         paths = builder.build(self.work)

@@ -34,7 +34,7 @@ class InstallationTests(unittest.TestCase):
         result = self.install(with_trigger=True)
         self.assertTrue(path.read_bytes().startswith(old))
         self.assertEqual(result["backup"].read_bytes(), old)
-        self.assertIn(str(result["skill"] / "SKILL.md"), path.read_text())
+        self.assertIn((result["skill"] / "SKILL.md").resolve().as_posix(), path.read_text())
 
     def test_repeat_install_does_not_duplicate_trigger_or_backup(self):
         first = self.install(with_trigger=True)
